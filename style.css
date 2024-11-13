@@ -1,91 +1,37 @@
+/* Resetowanie marginesów i odstępów */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
     font-family: Arial, sans-serif;
-    color: #333;
 }
 
+/* Stylizacja nagłówka */
 header {
-    background-image: url('background.jpg');
-    background-size: cover;
-    color: #fff;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-.intro h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
-}
-
-.intro p {
-    font-size: 1.2em;
-}
-
-.cta-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    color: #fff;
     background-color: #007b5e;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.cta-button:hover {
-    background-color: #005f46;
-}
-
-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-section h2 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-}
-
-.founder, .activity {
-    margin: 20px 0;
-}
-
-.founder img {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #333;
     color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: bold;
 }
 
 /* Nawigacja */
 nav {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    position: sticky;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
+    background-color: #004b3a;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
@@ -93,36 +39,183 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a.active {
+    color: #ffc107;
+    border-bottom: 2px solid #ffc107;
+}
+
+/* Stylizacja sekcji */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2em;
     color: #007b5e;
+    margin-bottom: 20px;
 }
 
-/* Formularz kontaktowy */
-form {
-    max-width: 500px;
-    margin: 0 auto;
+section p {
+    font-size: 1.1em;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+}
+
+/* Przyciski CTA */
+.cta-button {
+    display: inline-block;
+    background-color: #007b5e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #005f46;
+    transform: scale(1.05);
+}
+
+/* Sekcja Obszary Działalności */
+#activities {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
 }
 
-form input, form textarea {
+.activity {
+    background-color: #f9f9f9;
+    border-left: 5px solid #007b5e;
+    padding: 15px;
+    margin-bottom: 20px;
+    max-width: 600px;
+    text-align: left;
+    transition: border-color 0.3s;
+}
+
+.activity:hover {
+    border-color: #005f46;
+}
+
+.activity h3 {
+    font-size: 1.5em;
+    color: #007b5e;
+    margin-bottom: 10px;
+}
+
+/* Sekcja O Nas */
+#founders img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #007b5e;
+}
+
+.founder {
+    text-align: center;
+    margin: 20px;
+}
+
+.founder h3 {
+    font-size: 1.3em;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Sekcja Kontakt */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#contact input, 
+#contact textarea {
     padding: 10px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1em;
 }
 
-form button {
-    padding: 10px;
+#contact input[type="submit"] {
     background-color: #007b5e;
     color: #fff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-form button:hover {
+#contact input[type="submit"]:hover {
     background-color: #005f46;
+}
+
+/* Animacje */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+#activities, #contact, #founders, #mission {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+    }
+    
+    #activities {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    
+    section h2 {
+        font-size: 1.8em;
+    }
+    
+    section p {
+        font-size: 1em;
+    }
 }
