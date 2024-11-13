@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Life Ecology Technologies</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Menu nawigacyjne -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mission">Misja i Wizja</a></li>
+            <li><a href="#founders">Założyciele</a></li>
+            <li><a href="#activities">Obszary Działalności</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
     <!-- Strona główna -->
     <header id="home">
         <div class="intro">
@@ -43,12 +55,34 @@
         <h2>Obszary Działalności</h2>
         <div class="activity">
             <h3>Energia Odnawialna</h3>
-            <p>Technologie wykorzystujące energię słoneczną, wiatrową i magazynowanie energii.</p>
+            <p>Technologie wykorzystujące energię słoneczną, wiatrową i magazynowanie energii. Pracujemy nad nowymi sposobami zwiększenia efektywności i dostępności energii odnawialnej.</p>
         </div>
         <div class="activity">
             <h3>Biotechnologia Ekologiczna</h3>
-            <p>Odbudowa ekosystemów, ochrona bioróżnorodności i walka z zanieczyszczeniami.</p>
+            <p>Odbudowa ekosystemów, ochrona bioróżnorodności i walka z zanieczyszczeniami. Nasze technologie wspierają zdrowe i zrównoważone środowisko naturalne.</p>
         </div>
+        <div class="activity">
+            <h3>Gospodarka Wodna</h3>
+            <p>Rozwiązania wspomagające oszczędzanie i oczyszczanie wody, wspierające rozwój zasobów wodnych w obszarach o ograniczonym dostępie.</p>
+        </div>
+    </section>
+
+    <!-- Kontakt -->
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Chcesz się z nami skontaktować? Wypełnij formularz poniżej, a my odpowiemy na Twoje pytania.</p>
+        <form>
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="message">Wiadomość:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Wyślij</button>
+        </form>
     </section>
 
     <!-- Stopka -->
