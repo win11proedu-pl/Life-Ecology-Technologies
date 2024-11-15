@@ -1,50 +1,54 @@
 /* Основные стили */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f4f9f4;
+    color: #333;
     margin: 0;
     padding: 0;
-    color: #333;
 }
 
 /* Навигация */
-nav {
-    background-color: #343a40;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.navbar {
+    background-color: #2c6e49; /* Темно-зеленый */
 }
 
-.navbar-brand {
-    font-size: 1.8rem;
+.navbar a.nav-link {
+    color: #ffffff !important;
     font-weight: bold;
 }
 
-.nav-link {
-    color: #fff !important;
-    font-size: 1.1rem;
+.navbar a.nav-link:hover {
+    color: #ffcc00 !important; /* Желтый для акцента */
+}
+
+/* Кнопка активной навигации */
+.navbar-scrolled {
+    background-color: #1e4d34; /* Темно-зеленый с эффектом прокрутки */
+}
+
+.navbar-brand {
+    color: #ffffff !important;
 }
 
 .navbar-toggler-icon {
-    background-color: #fff;
+    background-color: #ffffff;
 }
 
-/* Hero Section */
+/* Герой-секция */
 .hero {
-    background-image: url('img/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    padding: 100px 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #4CAF50; /* Ярко-зеленый */
+    color: white;
+    text-align: center;
+    padding: 80px 0;
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.5em;
     font-weight: bold;
 }
 
 .hero p {
-    font-size: 1.5rem;
-    margin-top: 20px;
+    font-size: 1.5em;
 }
 
 /* Секции */
@@ -53,192 +57,146 @@ nav {
 }
 
 .section-bg {
-    background-color: #f8f9fa;
+    background-color: #e6f4e6; /* Светлый зеленый фон */
 }
 
-/* About Section */
-#about h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+.section h2 {
+    color: #2c6e49;
+    font-size: 2.5em;
 }
 
-#about p {
-    font-size: 1.1rem;
+.section p {
+    font-size: 1.2em;
     line-height: 1.6;
 }
 
-#about .col-md-4 h3 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-}
-
-/* Services Section */
-#services h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.icon-box {
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.text-center {
     text-align: center;
+}
+
+/* О фирме */
+#about .row {
+    margin-top: 40px;
+}
+
+#about .col-md-4 {
+    background-color: #f2f8f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about .col-md-4 h3 {
+    color: #2c6e49;
+}
+
+/* Услуги */
+#services .col-md-4 {
+    background-color: #d9f0d9; /* Светло-зеленый */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#services .fa {
+    color: #4CAF50;
+}
+
+#services h4 {
+    font-size: 1.6em;
+    color: #2c6e49;
+}
+
+#services p {
+    font-size: 1.2em;
+}
+
+/* Задний фон */
+.icon-box {
+    padding: 30px;
+    background-color: #f4f9f4;
     border-radius: 8px;
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .icon-box:hover {
-    transform: translateY(-10px);
+    background-color: #e0f7e0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.icon-box i {
-    color: #4CAF50;
-    font-size: 3rem;
-}
-
-.icon-box h4 {
-    font-size: 1.6rem;
-    margin-top: 15px;
-}
-
-.icon-box p {
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-/* Team Section */
-#team .icon-box {
-    text-align: center;
-}
-
-.team-photo {
-    width: 100%;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    max-width: 200px;
-    height: 200px;
-    object-fit: cover;
-}
-
-#team h4 {
-    font-size: 1.6rem;
-    margin-bottom: 10px;
-}
-
-#team p {
-    font-size: 1.1rem;
-}
-
-/* Projects Section */
-#projects h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-#projects .icon-box i {
-    font-size: 2.5rem;
-    color: #007bff;
-}
-
-#projects .icon-box h4 {
-    font-size: 1.6rem;
-    margin-top: 15px;
-}
-
-#projects .icon-box p {
-    font-size: 1.1rem;
-    margin-top: 10px;
-}
-
-/* Testimonials Section */
-#testimonials blockquote {
-    font-style: italic;
-    background-color: #fff;
+/* Задачи */
+#projects .icon-box {
+    background-color: #f1fdf1;
     padding: 30px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-left: 5px solid #007bff;
-    margin: 30px 0;
-    border-radius: 8px;
 }
 
-#testimonials footer {
-    font-size: 1.1rem;
-    color: #007bff;
+#projects i {
+    font-size: 3em;
+    color: #2c6e49;
 }
 
-/* Contact Section */
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 40px;
+#projects h4 {
+    color: #2c6e49;
+    font-size: 1.6em;
 }
 
-form .form-control {
-    margin-bottom: 20px;
-    padding: 15px;
-    font-size: 1.1rem;
-    border-radius: 8px;
+#projects p {
+    font-size: 1.2em;
 }
 
-form button {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    background-color: #007bff;
+/* Секция контактов */
+#contact {
+    background-color: #4CAF50;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    padding: 50px 0;
 }
 
-form button:hover {
-    background-color: #0056b3;
+#contact h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+#contact p {
+    font-size: 1.2em;
+    line-height: 1.6;
 }
 
 /* Footer */
-footer {
-    background-color: #343a40;
-    color: white;
-    padding: 20px 0;
+.footer {
+    background-color: #2c6e49; /* Темно-зеленый */
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
 }
 
-footer p {
+.footer p {
+    font-size: 1.2em;
     margin: 0;
 }
 
-footer p a {
-    color: #007bff;
-    text-decoration: none;
+/* Дополнительные эффекты */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, background-color 0.3s;
 }
 
-footer p a:hover {
-    text-decoration: underline;
+button:hover {
+    background-color: #388e3c;
+    transform: scale(1.05);
 }
 
-/* Анимация */
-[data-aos="fade-up"] {
+/* Плавная анимация при прокрутке */
+[data-aos] {
     opacity: 0;
     transition: opacity 1s ease-out;
 }
 
-[data-aos="fade-up"].aos-animate {
+[data-aos].aos-animate {
     opacity: 1;
-}
-
-/* Мобильная адаптивность */
-@media (max-width: 767px) {
-    .hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero p {
-        font-size: 1.2rem;
-    }
-
-    #about h2,
-    #services h2,
-    #team h2,
-    #projects h2,
-    #testimonials h2,
-    #contact h2 {
-        font-size: 2rem;
-    }
 }
