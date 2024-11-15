@@ -1,202 +1,190 @@
-/* Основные стили */
+/* Общие стили */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f9f4;
     color: #333;
     margin: 0;
     padding: 0;
+    background-color: #f4f8f7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Hero Section */
+.hero {
+    background: #2d6a4f;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
 }
 
 /* Навигация */
 .navbar {
-    background-color: #2c6e49; /* Темно-зеленый */
+    background-color: #1b4d3e;
+    transition: background-color 0.3s ease;
 }
 
-.navbar a.nav-link {
-    color: #ffffff !important;
-    font-weight: bold;
-}
-
-.navbar a.nav-link:hover {
-    color: #ffcc00 !important; /* Желтый для акцента */
-}
-
-/* Кнопка активной навигации */
 .navbar-scrolled {
-    background-color: #1e4d34; /* Темно-зеленый с эффектом прокрутки */
+    background-color: #163f31;
 }
 
 .navbar-brand {
-    color: #ffffff !important;
-}
-
-.navbar-toggler-icon {
-    background-color: #ffffff;
-}
-
-/* Герой-секция */
-.hero {
-    background-color: #4CAF50; /* Ярко-зеленый */
-    color: white;
-    text-align: center;
-    padding: 80px 0;
-}
-
-.hero h1 {
-    font-size: 3.5em;
+    font-size: 28px;
     font-weight: bold;
 }
 
-.hero p {
-    font-size: 1.5em;
+.navbar-nav .nav-link {
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 15px;
 }
 
-/* Секции */
+.navbar-nav .nav-link:hover {
+    color: #a8dadc;
+}
+
+/* Разделы */
 .section {
     padding: 60px 0;
 }
 
 .section-bg {
-    background-color: #e6f4e6; /* Светлый зеленый фон */
-}
-
-.section h2 {
-    color: #2c6e49;
-    font-size: 2.5em;
-}
-
-.section p {
-    font-size: 1.2em;
-    line-height: 1.6;
+    background-color: #e0f7fa;
 }
 
 .text-center {
     text-align: center;
 }
 
-/* О фирме */
-#about .row {
-    margin-top: 40px;
-}
-
-#about .col-md-4 {
-    background-color: #f2f8f2;
+/* Стиль для секции с карточками */
+.icon-box {
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#about .col-md-4 h3 {
-    color: #2c6e49;
-}
-
-/* Услуги */
-#services .col-md-4 {
-    background-color: #d9f0d9; /* Светло-зеленый */
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#services .fa {
-    color: #4CAF50;
-}
-
-#services h4 {
-    font-size: 1.6em;
-    color: #2c6e49;
-}
-
-#services p {
-    font-size: 1.2em;
-}
-
-/* Задний фон */
-.icon-box {
-    padding: 30px;
-    background-color: #f4f9f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
 }
 
 .icon-box:hover {
-    background-color: #e0f7e0;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px);
 }
 
-/* Задачи */
-#projects .icon-box {
-    background-color: #f1fdf1;
-    padding: 30px;
+.icon-box i {
+    color: #2d6a4f;
+    font-size: 40px;
 }
 
-#projects i {
-    font-size: 3em;
-    color: #2c6e49;
+.icon-box h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 15px;
 }
 
-#projects h4 {
-    color: #2c6e49;
-    font-size: 1.6em;
+.icon-box p {
+    font-size: 16px;
+    color: #666;
 }
 
-#projects p {
-    font-size: 1.2em;
+/* Форма обратной связи */
+form input,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
 }
 
-/* Секция контактов */
-#contact {
-    background-color: #4CAF50;
+form button {
+    background-color: #2d6a4f;
     color: white;
-    padding: 50px 0;
-}
-
-#contact h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-}
-
-#contact p {
-    font-size: 1.2em;
-    line-height: 1.6;
-}
-
-/* Footer */
-.footer {
-    background-color: #2c6e49; /* Темно-зеленый */
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
-}
-
-.footer p {
-    font-size: 1.2em;
-    margin: 0;
-}
-
-/* Дополнительные эффекты */
-button {
-    background-color: #4CAF50;
-    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
     border: none;
-    padding: 10px 20px;
-    font-size: 1.2em;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out, background-color 0.3s;
+    transition: transform 0.3s ease;
 }
 
-button:hover {
-    background-color: #388e3c;
+form button:hover {
     transform: scale(1.05);
 }
 
-/* Плавная анимация при прокрутке */
-[data-aos] {
-    opacity: 0;
-    transition: opacity 1s ease-out;
+form button:active {
+    transform: scale(1);
 }
 
-[data-aos].aos-animate {
+/* Отзывы */
+blockquote {
+    background-color: #ffffff;
+    padding: 20px;
+    border-left: 5px solid #2d6a4f;
+    margin: 20px 0;
+    font-style: italic;
+}
+
+blockquote footer {
+    font-size: 14px;
+    text-align: right;
+    color: #2d6a4f;
+}
+
+/* Задний фон для секций */
+.section-bg {
+    background-color: #eaf9f3;
+}
+
+.footer {
+    background-color: #1b4d3e;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Анимации */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
     opacity: 1;
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+[data-aos="fade-down"].aos-animate {
+    opacity: 1;
+    transform: translateY(0);
 }
