@@ -2,7 +2,6 @@
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -110,53 +109,6 @@ form .btn:hover {
 
 .footer a:hover {
     color: #fff;
-}
-
-footer p {
-    margin: 0;
-    font-size: 14px;
-    color: #ccc;
-}
-
-/* Hero Section */
-.hero {
-    background-image: url('../img/hero-bg.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-}
-
-/* General Sections */
-.section {
-    padding: 60px 20px;
-}
-
-.section-bg {
-    background-color: #e9f7f3;
-}
-
-/* Icon Boxes */
-.icon-box {
-    text-align: center;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: white;
-}
-
-.icon-box i {
-    font-size: 40px;
-    color: #28a745;
-}
-
-/* Team Photos */
-.team-photo {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
 }
 
 /* Media Queries */
