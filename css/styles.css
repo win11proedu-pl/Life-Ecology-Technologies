@@ -1,16 +1,16 @@
-/* General Styling */
+/* Основные стили */
 body {
     font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Georgia', serif;
-}
-
-/* Navigation Bar */
-.navbar {
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Навигация */
+nav {
+    background-color: #343a40;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
@@ -18,114 +18,227 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-.navbar-nav .nav-link {
-    font-size: 1rem;
-    margin-left: 10px;
-    transition: color 0.3s ease-in-out;
+.nav-link {
+    color: #fff !important;
+    font-size: 1.1rem;
 }
 
-.navbar-nav .nav-link:hover {
-    color: #ffce00;
+.navbar-toggler-icon {
+    background-color: #fff;
 }
 
-/* Header Section */
-header {
-    background: linear-gradient(45deg, #007bff, #0056b3);
+/* Hero Section */
+.hero {
+    background-image: url('img/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
     color: #fff;
     padding: 100px 0;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-header h1 {
-    font-size: 3rem;
-    font-weight: 700;
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
 }
 
-header p {
-    font-size: 1.25rem;
-    margin-top: 10px;
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 20px;
+}
+
+/* Секции */
+.section {
+    padding: 60px 0;
+}
+
+.section-bg {
+    background-color: #f8f9fa;
 }
 
 /* About Section */
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
 #about p {
     font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+#about .col-md-4 h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
 }
 
 /* Services Section */
-#services .card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+#services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
-#services .card:hover {
+.icon-box {
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.icon-box:hover {
     transform: translateY(-10px);
 }
 
-#services .card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
+.icon-box i {
+    color: #4CAF50;
+    font-size: 3rem;
 }
 
-/* Testimonials */
-blockquote {
+.icon-box h4 {
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+
+.icon-box p {
     font-size: 1.1rem;
-    color: #555;
+    margin-top: 10px;
+}
+
+/* Team Section */
+#team .icon-box {
+    text-align: center;
+}
+
+.team-photo {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+#team h4 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+#team p {
+    font-size: 1.1rem;
+}
+
+/* Projects Section */
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+#projects .icon-box i {
+    font-size: 2.5rem;
+    color: #007bff;
+}
+
+#projects .icon-box h4 {
+    font-size: 1.6rem;
+    margin-top: 15px;
+}
+
+#projects .icon-box p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Testimonials Section */
+#testimonials blockquote {
+    font-style: italic;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-left: 5px solid #007bff;
-    padding-left: 15px;
+    margin: 30px 0;
+    border-radius: 8px;
 }
 
-/* Contact Form */
-form {
-    max-width: 600px;
-    margin: 0 auto;
+#testimonials footer {
+    font-size: 1.1rem;
+    color: #007bff;
 }
 
-form .form-label {
-    font-weight: bold;
+/* Contact Section */
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
 }
 
-form .btn {
+form .form-control {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+}
+
+form button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
     background-color: #007bff;
+    color: white;
     border: none;
-    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-form .btn:hover {
+form button:hover {
     background-color: #0056b3;
 }
 
 /* Footer */
-.footer {
-    background: #333;
-    color: #fff;
+footer {
+    background-color: #343a40;
+    color: white;
     padding: 20px 0;
 }
 
-.footer a {
-    color: #ffce00;
-    transition: color 0.3s ease-in-out;
+footer p {
+    margin: 0;
 }
 
-.footer a:hover {
-    color: #fff;
+footer p a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    header {
-        padding: 50px 0;
+footer p a:hover {
+    text-decoration: underline;
+}
+
+/* Анимация */
+[data-aos="fade-up"] {
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+[data-aos="fade-up"].aos-animate {
+    opacity: 1;
+}
+
+/* Мобильная адаптивность */
+@media (max-width: 767px) {
+    .hero h1 {
+        font-size: 2.5rem;
     }
 
-    header h1 {
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    #about h2,
+    #services h2,
+    #team h2,
+    #projects h2,
+    #testimonials h2,
+    #contact h2 {
         font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .navbar-nav {
-        text-align: center;
     }
 }
