@@ -4,7 +4,9 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    background-color: #f4f8f7;
+    background: url('img/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-color: #2d6a4f; /* Цвет для резервного фона */
 }
 
 a {
@@ -18,11 +20,11 @@ h1, h2, h3, h4, h5 {
 
 /* Hero Section */
 .hero {
-    background: #2d6a4f;
+    background: rgba(45, 106, 79, 0.8); /* Полупрозрачный слой для текста */
     color: white;
     padding: 100px 0;
     text-align: center;
-    background-image: url('img/hero-bg.jpg');
+    background-image: url('img/hero-bg.jpg'); /* Фон геро-секции */
     background-size: cover;
     background-position: center;
 }
@@ -65,10 +67,11 @@ h1, h2, h3, h4, h5 {
 /* Разделы */
 .section {
     padding: 60px 0;
+    background-color: rgba(234, 249, 243, 0.9); /* Лёгкий зелёный оттенок */
 }
 
 .section-bg {
-    background-color: #e0f7fa;
+    background-color: rgba(224, 247, 250, 0.9);
 }
 
 .text-center {
@@ -152,7 +155,7 @@ blockquote footer {
 
 /* Задний фон для секций */
 .section-bg {
-    background-color: #eaf9f3;
+    background-color: rgba(234, 249, 243, 0.9);
 }
 
 .footer {
